@@ -6,15 +6,14 @@ Reference: https://github.com/neubig/nn4nlp-code
 
 ### Language Model (feedforward and LSTM)
 
-Treebank data: data/ptb/train.txt, valid.txt, and test.txt
-
 02-lm-pytorch.py
 - FNN_LM: embedding -> FC -> Tanh -> FC
 - train_model() train on sentence one-by-one
+- data: Penn Treebank data, data/ptb/train.txt, valid.txt, and test.txt
 
 04-lm-lstm.py
 - LM_LSTM: embedding -> LSTM -> FC
-- ptb_iterator() geenrate minibatch
+- ptb_iterator() geenrate minibatch from Penn Treebank data
 - run_epoch() train and evaluate model
 - Test perplexity: 125.90
 
@@ -49,3 +48,15 @@ Treebank data: data/ptb/train.txt, valid.txt, and test.txt
 - WordEmbCbow: embedding -> FC
 - CBowDataset read and preprocess data
 - train_model() train model and save embeddings
+
+### Seq2seq (LSTM and attention)
+
+08-seq2seq-LSTM.py
+- Seq2seq with encoder and decoder; both encoder and decoder use LSTM
+- Multi30k dataset from torchtext
+- After 10 epoch, Test Loss: 2.995 | Test PPL:  19.979
+
+09-seq2seq-attention.py
+- Seq2seq with encoder and decoder, implemented as the transformer paper
+- Multi30k dataset from torchtext
+- After 10 epoch, Test Loss: 1.689 | Test PPL:   5.416

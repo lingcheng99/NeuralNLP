@@ -30,8 +30,8 @@ Treebank data: data/ptb/train.txt, valid.txt, and test.txt
 
 05-lstm-sentiment.py on IMDB dataset
 - RNN1: one-directional GRU -> FC
-- RNN2: bidirectional GRU with Glove embeddings
-- IMDBDataset read and preprocess data
+- RNN2: bidirectional GRU -> FC
+- IMDBDataset read and preprocess data, with Glove embeddings
 - get_batch() generate minibatch
 - train_rnn() train ane evalaute model
 - test acc=0.84

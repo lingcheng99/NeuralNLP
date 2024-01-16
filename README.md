@@ -36,3 +36,10 @@ Treebank data: data/ptb/train.txt, valid.txt, and test.txt
 - train_rnn() train ane evalaute model
 - test acc=0.84
 
+### Word2vec (skipgram and cbow)
+
+06-wordemb-skipgram.py
+- data from http://mattmahoney.net/dc/text8.zip
+- Text8Dataset read data and performs subsampling and negative sampling
+- Skipgram take u_pos (positive center), v_pos (positive context), and v_neg (negative context) to compute loss
+- Word2Vec train and evaluate model

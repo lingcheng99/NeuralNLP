@@ -21,10 +21,18 @@ Treebank data: data/ptb/train.txt, valid.txt, and test.txt
 
 ### Sentiment Classification (CNN and LSTM)
 
-Sentiment classification data: data/classes/train.txt, dev.txt, and test.txt, with 0-4 as sentiment labels
-
-03-cnn-class.py
+03-cnn-class.py on classes dataset
 - CNN model: embedding -> conv1d -> max_pooling -> ReLU -> FC as final layer
 - CNNClassification build dataset and train
 - SentimentDataset read data and map to index; TorchDataset handles batching and padding
+- Sentiment classification data: data/classes/train.txt, dev.txt, and test.txt, with 0-4 as sentiment labels
+- test acc=0.3710
+
+05-lstm-sentiment.py on IMDB dataset
+- RNN1: one-directional GRU -> FC
+- RNN2: bidirectional GRU with Glove embeddings
+- IMDBDataset read and preprocess data
+- get_batch() generate minibatch
+- train_rnn() train ane evalaute model
+- test acc=0.84
 

@@ -43,3 +43,9 @@ Treebank data: data/ptb/train.txt, valid.txt, and test.txt
 - Text8Dataset read data and performs subsampling and negative sampling
 - Skipgram take u_pos (positive center), v_pos (positive context), and v_neg (negative context) to compute loss
 - Word2Vec train and evaluate model
+
+07-wordemb-cbow.py
+- data from data/ptb/train.txt, valid.txt, and test.txt
+- WordEmbCbow: embedding -> FC
+- CBowDataset read and preprocess data
+- train_model() train model and save embeddings

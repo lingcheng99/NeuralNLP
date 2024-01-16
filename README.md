@@ -1,21 +1,15 @@
 # NeuralNLP
 
-Pytorch implementation of CMU Neural NLP class 11-747 
+This repo contains my understanding and implementation of famous NLP algorithms from scratch, using PyTorch  
 
-Reference: https://github.com/neubig/nn4nlp-code
+Inspired by [CMU NeuralNLP class](https://github.com/neubig/nn4nlp-code) and [Ben Trevett's Seq2Seq](https://github.com/bentrevett/pytorch-seq2seq/)
 
-### Language Model (feedforward and LSTM)
+Most files are written as a standalone python file, including data preprocessing, model architecture, model training and evaluation. 
 
-02-lm-pytorch.py
-- FNN_LM: embedding -> FC -> Tanh -> FC
-- train_model() train on sentence one-by-one
-- data: Penn Treebank data, data/ptb/train.txt, valid.txt, and test.txt
+All use publicly available data. Performance was reported when available.
 
-04-lm-lstm.py
-- LM_LSTM: embedding -> LSTM -> FC
-- ptb_iterator() geenrate minibatch from Penn Treebank data
-- run_epoch() train and evaluate model
-- Test perplexity: 125.90
+Feedbacks are welcome!
+
 
 
 ### Sentiment Classification (CNN and LSTM)
@@ -60,3 +54,17 @@ Reference: https://github.com/neubig/nn4nlp-code
 - Seq2seq with encoder and decoder, implemented as the transformer paper
 - Multi30k dataset from torchtext
 - After 10 epoch, Test Loss: 1.689 | Test PPL:   5.416
+
+
+### Basic Language Model (feedforward and LSTM)
+
+02-lm-pytorch.py
+- FNN_LM: embedding -> FC -> Tanh -> FC
+- train_model() train on sentence one-by-one
+- data: Penn Treebank data, data/ptb/train.txt, valid.txt, and test.txt
+
+04-lm-lstm.py
+- LM_LSTM: embedding -> LSTM -> FC
+- ptb_iterator() geenrate minibatch from Penn Treebank data
+- run_epoch() train and evaluate model
+- Test perplexity: 125.90
